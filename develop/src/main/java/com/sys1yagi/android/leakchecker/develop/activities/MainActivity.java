@@ -2,17 +2,14 @@ package com.sys1yagi.android.leakchecker.develop.activities;
 
 import com.sys1yagi.android.leakchecker.LeakChecker;
 import com.sys1yagi.android.leakchecker.develop.R;
+import com.sys1yagi.android.leakchecker.develop.fragments.LeakedFragment;
 import com.sys1yagi.android.leakchecker.develop.fragments.MemoryUsageFragment;
 import com.sys1yagi.android.leakchecker.develop.fragments.MenuListFragment;
+import com.sys1yagi.android.leakchecker.develop.fragments.NotLeakedFragment;
 
 import android.support.v7.app.ActionBarActivity;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
 
 public class MainActivity extends ActionBarActivity
         implements MenuListFragment.OnFragmentInteractionListener {
@@ -45,9 +42,12 @@ public class MainActivity extends ActionBarActivity
     public void onFragmentInteraction(int pos) {
         switch (pos) {
             case 0:
-
+                replace(LeakedFragment.newInstance());
                 break;
             case 1:
+                replace(NotLeakedFragment.newInstance());
+                break;
+            case 2:
                 replace(MemoryUsageFragment.newInstance());
                 break;
         }

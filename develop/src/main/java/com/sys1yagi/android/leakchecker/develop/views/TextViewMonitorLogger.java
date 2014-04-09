@@ -4,11 +4,11 @@ import com.sys1yagi.android.leakchecker.ILogger;
 
 import android.widget.TextView;
 
-public class TextViewLogger implements ILogger {
+public class TextViewMonitorLogger implements ILogger {
 
     private TextView target;
 
-    public TextViewLogger(TextView target) {
+    public TextViewMonitorLogger(TextView target) {
         this.target = target;
     }
 

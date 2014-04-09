@@ -2,7 +2,7 @@ package com.sys1yagi.android.leakchecker.develop.fragments;
 
 import com.sys1yagi.android.leakchecker.MemoryUsage;
 import com.sys1yagi.android.leakchecker.develop.R;
-import com.sys1yagi.android.leakchecker.develop.views.TextViewLogger;
+import com.sys1yagi.android.leakchecker.develop.views.TextViewMonitorLogger;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -74,7 +74,7 @@ public class MemoryUsageFragment extends Fragment {
             }
         });
 
-        TextViewLogger logger = new TextViewLogger(
+        TextViewMonitorLogger logger = new TextViewMonitorLogger(
                 (TextView) getView().findViewById(R.id.usage_text));
         MemoryUsage.setLogger(logger);
 

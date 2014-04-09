@@ -27,7 +27,8 @@ public class MenuListFragment extends ListFragment {
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
                 android.R.layout.simple_list_item_1, android.R.id.text1);
-        adapter.add("Leak Check");
+        adapter.add("Leak Check : Leaked");
+        adapter.add("Leak Check : Not Leaked");
         adapter.add("Memory Usage");
 
         setListAdapter(adapter);
